@@ -1,26 +1,29 @@
+const calculatorPage= require('./pages/calculatorPage');
+const angularPage=require('./pages/angularPage');
 describe('angularjs homepage todo list', function() {
+  
+  
     it('should add a todo', function() {
       browser.get('https://angularjs.org');
   
-      element(by.model('todoList.todoText')).sendKeys('write first protractor test');
-      element(by.css('[value="add"]')).click();
+      angularPage.todoListTodoText.sendKeys('write first protractor test');
+      angularPage.addButton.click();
   
       var todoList = element.all(by.repeater('todo in todoList.todos'));
       expect(todoList.count()).toEqual(3);
       expect(todoList.get(2).getText()).toEqual('write first protractor test');
-  
+      
       // You wrote your first test, cross it off the list
-      todoList.get(2).element(by.css('input')).click();
+      todoList.get(2).angularPage.inputButton.click();
       var completedAmount = element.all(by.css('.done-true'));
       expect(completedAmount.count()).toEqual(2);
     });
 
-    it('Navigating to new website', function() {
+    it('Navigating to Julimer calculator to add 2 nummbers', function() {
         browser.get('http://juliemr.github.io/protractor-demo/');
-        element(by.model('first')).sendKeys('5');
-        element(by.model('second')).sendKeys('3');
-        element(by.id('gobutton')).click();
-
-        expect(element(by.className('ng-binding')).getText()).toEqual('8');
+        calculatorPage.firstTxtField.sendKeys('6');
+        calculatorPage.secondTxtField.sendKeys('3');
+        calculatorPage.goButton.click();
+        expect(calculatorPage.resultTxtField.getText()).toEqual('9');
     })
   });

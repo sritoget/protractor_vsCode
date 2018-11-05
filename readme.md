@@ -2,7 +2,7 @@
 This is my first VSCode Protractor framework
 
 
-Installation:
+# Installation:
 Install node.js then:
 
 $ cd e2e-protractor-node
