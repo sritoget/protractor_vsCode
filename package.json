@@ -1,0 +1,24 @@
+{
+  "name": "protractortesting_vscode",
+  "version": "1.0.0",
+  "description": "Page object model using JS+Protractor",
+  "main": "config.js",
+  "dependencies": {
+    "protractor": "^5.4.1",
+    "protractor-beautiful-reporter": "^1.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sritoget/protractor_vsCode.git"
+  },
+  "author": "Srikrishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sritoget/protractor_vsCode/issues"
+  },
+  "homepage": "https://github.com/sritoget/protractor_vsCode#readme"
+}
